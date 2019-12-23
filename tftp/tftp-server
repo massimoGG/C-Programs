@@ -1,0 +1,4 @@
+sysctl net.ipv4.ip_unprivileged_port_start=69
+iptables -I INPUT -p tcp --dport 70:442 -j DROP
+iptables -I INPUT -p udp --dport 70:1024 -j DROP
+iptables -I INPUT -p tcp --dport 444:1024 -j DROP
