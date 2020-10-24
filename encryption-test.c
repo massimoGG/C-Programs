@@ -89,10 +89,10 @@ int main(int argc, char *argv[]) {
   nsec = (unsigned char *)malloc(1*sizeof(unsigned char));
   npub = (unsigned char *)malloc(1*sizeof(unsigned char));
   
-  if (key & ciphertext & ciphertext_length & plaintext_bis & plaintext_length_bis & nsec & npub)
+  /*if (key & ciphertext & ciphertext_length & plaintext_bis & plaintext_length_bis & nsec & npub)
   {
 	  return -1;
-  }
+  }*/
   /* assigning memory */
   *nsec = 01;
   *npub = 15;
@@ -173,28 +173,15 @@ int main(int argc, char *argv[]) {
   printf("%lu",dtime);
   if (DEBUG)  printf("%f Bytes/second or %f KiB/second.\n", BUFFERSIZE*1024/((float)dtime/1E6), BUFFERSIZE/((float)dtime/1E6));
 
-/*
-  free(buffer);
+  //free(buffer);
   free(key);
-puts("WA");
   free(ciphertext);
-puts("WA");
-
-  free(ciphertext_length);
-puts("WA");
-
+  //free(ciphertext_length);
   free(plaintext_bis);
-puts("WA");
-
   free(plaintext_length_bis);
-puts("WA");
-
   free(nsec);
-puts("WA");
-
   free(npub);
-puts("WA");
-*/
+  
   /* close the file */
   fclose(fh);
 
