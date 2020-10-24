@@ -10,6 +10,7 @@
 // #define FILENAME "../2_data/random_1MiB.dat"
 //#define BUFFERSIZE 1024*64
 
+// Externally declared functions. Linked with Xoodyak library 
 int crypto_aead_encrypt(
   unsigned char *c, unsigned long long *clen,
   const unsigned char *m, unsigned long long mlen,
