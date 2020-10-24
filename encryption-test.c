@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
     return -1;
   }
   unsigned long long BUFFERSIZE = atoi(argv[1]) * 1024;
-  //  unsigned char *buffer = malloc(BUFFERSIZE);// Eerste argument
+  //  unsigned char *buffer = malloc(BUFFERSIZE); // Dynamically allocating memory apparently decreases performance drastically.
   char FILENAME[100];
 
   int choice = atoi(argv[2]);
@@ -176,7 +176,7 @@ int main(int argc, char *argv[]) {
   //free(buffer);
   free(key);
   free(ciphertext);
-  //free(ciphertext_length);
+  //free(ciphertext_length);	// Something is overwriting the pointer which causes seg faults
   free(plaintext_bis);
   free(plaintext_length_bis);
   free(nsec);
